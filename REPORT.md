@@ -73,9 +73,9 @@ The second environment was used, which is to train on **20 identical agents**. T
 
 ## Ideas for Future Work
 
-To improve the performance of the agent, there are several ideas to modify the deep Q-Learning algorithm we have used:
--	**Double DQN**: Deep Q-Learning tends to [overestimate](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf) the action values. Double Q-Learning has been shown to work well in practice to help with [this](https://arxiv.org/abs/1509.06461).
--	**Prioritized Experience Replay**: Deep Q-Learning samples experience transitions uniformly from a replay memory. [Prioritized experienced replay](https://arxiv.org/abs/1511.05952) is based on the idea that the agent can learn more effectively from some transitions than from others, and the more important transitions should be sampled with higher probability.
--	**Dueling DQN**: Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values for each action. However, by replacing the traditional Deep Q-Network (DQN) architecture with a [dueling architecture](https://arxiv.org/abs/1511.06581), we can assess the value of each state, without having to learn the effect of each action.
+To improve the performance of the agent(s), there are several ideas to tune the DDPG algorithm we have used:
+- Through **trial and error** and test out other combinations of the hyperparameters, there might be other sets of values that could solve the environment faster.
+- DDPG used minibatches taken uniformly from the replay buffer. We can test out the **prioritized replay buffer** and compare the results.
+- The requirement of the task was set to a score of +30 over 100 consecutive episodes. With a **higher target score**, the agents might do better.
 
-Besides, we can also train the agent directly from its observed raw pixels of the environment instead of using the 37 dimensional states. In this case, we can add a series of [Convolutional Neural Networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) to extract the spatial features from the pixels. DeepMind already leveraged such method to build the Deep Q-Learning algorithm that learned to play Atari video games.
+There are also other actor-critic methods available for us to explore, such as [A3C - Asynchronous Advantage Actor-Critic](https://arxiv.org/abs/1602.01783), [PPO - Proximal Policy Optimization](https://arxiv.org/pdf/1707.06347.pdf), [D4PG - Distributed Distributional Deterministic Policy Gradients](https://arxiv.org/pdf/1804.08617.pdf), etc. We can run this project on these algorithms and compare the results.
