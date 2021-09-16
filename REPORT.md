@@ -65,16 +65,11 @@ The visualization of the model architecture is as follows:
 
 The networks used the Adam optimizer, and the learning rate was set to 0.001, with a batch size of 128.
 
-
-
-
-
-
 ### Plot of Rewards
 
-![DQN score](./images/Score.png)
+![Rewards](./images/Rewards.png)
 
-This model solved the environment in **489** episodes, which meets the requirement that the agent is able to receive an average reward (over 100 episodes) of at least +13. The final model is saved in 'checkpoint.pth'.
+The second environment was used, which is to train on **20 identical agents**. This model solved the environment in **20** episodes, which meets the requirement that the agent(s) must get an average score of **+30** over **100** consecutive episodes. The final model is saved in 'checkpoint.pth'.
 
 ## Ideas for Future Work
 
