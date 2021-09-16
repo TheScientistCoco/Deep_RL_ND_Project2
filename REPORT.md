@@ -16,33 +16,16 @@ For this project, you can choose either one of the two separate versions of the 
 ### Deep Deterministic Policy Gradient (DDPG)
 This project implements an off-policy method called **Deep Deterministic Policy Gradient**, the details can be found in [this paper](https://arxiv.org/pdf/1509.02971.pdf), written by researchers at Google Deepmind. The DDPG algorithm belongs to the actor-critic methods, that use deep function approximators to learn policies in high-dimensional, continuous action spaces.
 
-### Actor-Critic Method (model.py)
+The implementation details can be found in the **DDPG_agent.py** file in this repository.
+
+### Actor-Critic Method
 Actor-critic methods leverage the strengths of both policy-based and value-based methods. Using a policy-based approach, the agent (actor) learns how to act by directly estimating the optimal policy and maximizing reward through gradient ascent. Meanwhile, employing a value-based approach, the agent (critic) learns how to estimate the value (i.e., the future cumulative reward) of different state-action pairs. Actor-critic methods combine these two approaches in order to accelerate the learning process. Actor-critic agents are also more stable than value-based agents, while requiring fewer training samples than policy-based agents.
 
-
-
-
-
-
-
-
-
-
-
-
-### Deep Q-Networks
-
-This project implemented a value-based method called [Deep Q-Networks](https://en.wikipedia.org/wiki/Q-learning). A DQN, or Deep Q-Network, represents the action-value function in a Q-Learning framework as a neural network.
-
-![DQN algorithm](./images/DQN_algorithm.png)
-
-Deep RL use non-linear function approximators (deep neural network) to calculate the action values based directly on observation (state) from the environment. RL is notoriously unstable when neural networks are used to represent the action values (weights oscillate and diverge due to the high correlation between actions and states). Deep Q-Learning algorithm addressed these instabilities by using two key features: (1) Experience Replay; (2) Fixed Q-Targets.
-
-For detailed information on DQN, please look at the original [Deep Q-Learning algorithm paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf).
+The implementation details can be found in the **model.py** file in this repository.
 
 ### Hyperparameters
 
-The DQN used the following hyperparameters (details in dqn_agent.py)
+The DDPG used the following hyperparameters (details in ddpg_agent.py)
 
 ```
 BUFFER_SIZE = int(1e5)  # replay buffer size
