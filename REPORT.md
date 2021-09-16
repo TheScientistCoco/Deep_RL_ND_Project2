@@ -69,7 +69,7 @@ The networks used the Adam optimizer, and the learning rate was set to 0.001, wi
 
 ![Rewards](./images/Rewards.png)
 
-The second environment was used, which is to train on **20 identical agents**. This model solved the environment in **20** episodes, which meets the requirement that the agent(s) must get an average score of **+30** over **100** consecutive episodes. The final model is saved in **checkpoint_actor.pth** and **checkpoint_critic.pth**.
+The second environment was used, which is to train on **20 identical agents**. This model solved the environment in **20** episodes, which meets the requirement that the agents are able to receive an average reward (over 100 episodes, and over all 20 agents) of at least +30. The final model is saved in **checkpoint_actor.pth** and **checkpoint_critic.pth**.
 
 ## Ideas for Future Work
 
