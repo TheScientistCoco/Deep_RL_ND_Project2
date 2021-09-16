@@ -83,6 +83,7 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 ## Instructions
 
-This project used an actor-critic algorithm, the Deep Deterministic Policy Gradients (DDPG) algorithm to train the agent. To get started, execute the provided notebook `Navigation.ipynb` in this repository. This agent was trained in the Udacity online workspace, that allows the use of a Nvidia K80 GPU.
+This project used an actor-critic algorithm, the Deep Deterministic Policy Gradients (DDPG) algorithm to train the agent. To get started, execute the provided notebook `Continuous_Control.ipynb` in this repository. This agent was trained in the Udacity online workspace, that allows the use of a Nvidia K80 GPU.
 
 You can also build your own local environment to complete the task, please make necessary adjustements for the path to the UnityEnvironment in the code. A Python 3.6 & a PyTorch 0.4.0 environment are suggested to be installed on your local machine to complete this task.
+
