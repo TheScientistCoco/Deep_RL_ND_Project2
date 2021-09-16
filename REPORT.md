@@ -59,7 +59,15 @@ The Actor received 33 variables (observation space) as input and generated 4 num
 
 The Critic received 33 variables (observation space) as input, and its first hidden layer was stacked with the Actor's output layer as the Critic's second hidden layer. Eventually giving predictions on the target value, the optimal action-value function Q(s,a), by using the Actor's best-believed action.
 
-The networks used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64.
+The visualization of the model architecture is as follows:
+
+![Model_architecture](./images/Model_architecture.png)
+
+The networks used the Adam optimizer, and the learning rate was set to 0.001, with a batch size of 128.
+
+
+
+
 
 
 ### Plot of Rewards
