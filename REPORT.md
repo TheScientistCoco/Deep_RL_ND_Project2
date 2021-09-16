@@ -48,8 +48,6 @@ self.fc2 = nn.Linear(fc1_units, fc2_units)
 self.fc3 = nn.Linear(fc2_units, action_size)
 ```
 
-
-
 For the critic part, it consists of 3 fully connnected layers:
 ```
 self.fcs1 = nn.Linear(state_size, fcs1_units)
@@ -57,10 +55,11 @@ self.fc2 = nn.Linear(fcs1_units+action_size, fc2_units)
 self.fc3 = nn.Linear(fc2_units, 1)
 ```
 
+The Actor received 33 variables (observation space) as input and generated 4 numbers (predicted action)as output. The first two fully connected layers were followed by ReLU activation function while the third fully connected layers were followed by tanh activation function to output vector between -1 and 1. The Actor is used to approximate the optimal policy π deterministically.
 
+The Critic received 33 variables (observation space) as input, and its first hidden layer was stacked with the Actor's output layer as the Critic's second hidden layer. Eventually giving predictions on the target value, the optimal action-value function Q(s,a), by using the Actor's best-believed action.
 
-
-The number of the input units of the neural network is 37, corresponding to the state space dimension. The number of the output nodes of the neural network is 4, corresponding to the action space dimension. I built a DDPG with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64.
+The networks used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64.
 
 
 ### Plot of Rewards
